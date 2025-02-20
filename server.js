@@ -14,10 +14,10 @@ app.use("/roles", roleRoutes);
 
 const initializeRoles = async () => {
     const predefinedRoles = [
-        { name: "super_admin", permissions: ["all"] },
-        { name: "admin", permissions: ["manage_users", "manage_samples"] },
-        { name: "laboratorista", permissions: ["view_samples", "edit_samples"] },
-        { name: "cliente", permissions: ["view_results"] }
+        { name: "super_admin", permissions: ["todos"] },
+        { name: "admin", permissions: ["gestionar_usuarios", "gestionar_muestras","Designar laboratoristas"] }, 
+        { name: "laboratorista", permissions: ["ver_muestras", "editar_muestras","registrar analisis de muestra"] },
+        { name: "cliente", permissions: ["ver_resultados"] } 
     ];
 
     for (const role of predefinedRoles) {
